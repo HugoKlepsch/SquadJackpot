@@ -16,7 +16,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="162dp"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:onClick="host"/>
 
     <Button
         android:layout_width="fill_parent"
@@ -24,5 +25,6 @@
         android:text="Join"
         android:id="@+id/selectGameMode_JoinButton"
         android:layout_below="@+id/selectGameMode_HostButton"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:onClick="join"/>
 </RelativeLayout>

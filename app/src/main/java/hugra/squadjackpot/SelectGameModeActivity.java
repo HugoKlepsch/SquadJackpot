@@ -2,8 +2,10 @@ package hugra.squadjackpot;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class SelectGameModeActivity extends AppCompatActivity {
@@ -35,4 +37,13 @@ public class SelectGameModeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void join(View v){
+        Log.d("sgm", "in join");
+    }
+
+    public void host(View v){
+        Log.d("sgm", "in host");
+    }
+
 }
