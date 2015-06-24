@@ -1,5 +1,6 @@
 package hugra.squadjackpot;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -38,13 +39,15 @@ public class SelectGameModeActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void join(View v){
-        Log.d("sgm", "in join");
-        //startActivity();
-    }
-
     public void host(View v){
         Log.d("sgm", "in host");
+        startActivity(new Intent(this, HostActivity.class));
     }
+
+    public void join(View v){
+        Log.d("sgm", "in join");
+    }
+
+
 
 }
