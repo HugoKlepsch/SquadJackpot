@@ -2,24 +2,22 @@ package hugra.squadjackpot;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class SelectGameModeActivity extends AppCompatActivity {
+public class HostActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_game_mode);
+        setContentView(R.layout.activity_host);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_select_game_mode, menu);
+        getMenuInflater().inflate(R.menu.menu_host, menu);
         return true;
     }
 
@@ -37,14 +35,4 @@ public class SelectGameModeActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    public void join(View v){
-        Log.d("sgm", "in join");
-        //startActivity();
-    }
-
-    public void host(View v){
-        Log.d("sgm", "in host");
-    }
-
 }
