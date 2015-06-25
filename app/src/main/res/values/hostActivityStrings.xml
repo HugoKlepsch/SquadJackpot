@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_activity_host">HostActivity</string>
+    <string name="title_activity_host">Host</string>
     <string name="hostActivity_titleText">Hosting!</string>
 </resources>

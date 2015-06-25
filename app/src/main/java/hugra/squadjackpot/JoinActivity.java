@@ -1,26 +1,30 @@
 package hugra.squadjackpot;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.nfc.NdefMessage;
+import android.nfc.NdefRecord;
+import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class SelectGameModeActivity extends Activity {
+public class JoinActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_game_mode);
+        setContentView(R.layout.activity_join);
+        NfcAdapter nfcAdapter = NfcAdapter.getDefaultAdapter(this);
+        if (nfcAdapter == null) return;  // NFC not available on this device
+        nfcAdapter.setNdefPushMessage(new NdefMessage(NdefRecord.createApplicationRecord("dong")), this);
+
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_select_game_mode, menu);
+        getMenuInflater().inflate(R.menu.menu_join, menu);
         return true;
     }
 
@@ -39,16 +43,9 @@ public class SelectGameModeActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void host(View v){
-        Log.d("sgm", "in host");
-        startActivity(new Intent(this, HostActivity.class));
+
+
+    public void setNdefPushMessage (NdefMessage message, Activity activity, Activity... activities){
+
     }
-
-    public void join(View v){
-        Log.d("sgm", "in join");
-        startActivity(new Intent(this, JoinActivity.class));
-    }
-
-
-
 }

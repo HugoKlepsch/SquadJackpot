@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="joinActivity_ActivityTitle">Join</string>
+    <string name="joinActivity_ConnectedToTitle">Connected to: </string>
+    <string name="joinActivity_PlayersTitle">Players: </string>
+</resources>
