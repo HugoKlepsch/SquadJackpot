@@ -82,7 +82,8 @@ public class JoinActivity extends Activity implements NfcAdapter.CreateNdefMessa
 
     @Override
     public NdefMessage createNdefMessage(NfcEvent event) {
-        String header = "Beam message \n\nCurrent Time: " + System.currentTimeMillis();
+        String header = "Beam message \n\nCurrent Time: " + System.currentTimeMillis() +
+                "\n\nFrom joinActivity";
         return new NdefMessage(new NdefRecord[]{
                 createMime(
                         "application/vnd.com.example.android.beam", header.getBytes())

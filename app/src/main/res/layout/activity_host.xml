@@ -47,6 +47,7 @@
                     android:layout_width="97dp"
                     android:layout_height="wrap_content"
                     android:text="New Button"
+                    android:onClick="addText"
                     />
             </LinearLayout>
             <LinearLayout
@@ -121,6 +122,10 @@
                     android:text="New Button"
                     />
             </LinearLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/HostActivity_debugTextView"/>
         </LinearLayout>
     </ScrollView>
 
